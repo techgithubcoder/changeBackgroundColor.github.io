@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+<body>
+    <div class="container">
+        <div class="main" id="main">
+            <h1>Change Background Color</h1>
+
+            <div class="bottom">
+                <button class="btn" id="red" onclick="red()">Red</button>
+                <button class="btn" id="yellow" onclick="yellow()">Yellow</button>
+                <button class="btn" id="green" onclick="green()">Green</button>
+                <button class="btn" id="sky" onclick="sky()">Sky</button>
+                <button class="btn" id="blue" onclick="blue()">Blue</button>
+                <button class="btn" id="purple" onclick="purple()">Purple</button>
+                <button class="btn" id="random">Random</button>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        
+        let bgColor=["red","yellow","green","sky","blue","purple"]
+        let btn=document.getElementById("random");
+        let mainDiv=document.getElementById("main")
+
+        function red(){
+            mainDiv.style.background="red"
+        
+        }
+
+        function yellow(){
+            mainDiv.style.background="yellow"
+        }
+
+
+        function green(){
+            mainDiv.style.background="green"
+        }
+
+        function sky(){
+            mainDiv.style.background="skyblue"
+        }
+
+
+        function blue(){
+            mainDiv.style.background="blue"
+        }
+
+        function purple(){
+            mainDiv.style.background="purple"
+        }
+
+        btn.addEventListener("click",()=>
+    {
+        let ranNum= Math.floor(((Math.random()* (5-0+1))+0))
+        
+        mainDiv.style.background= `${bgColor[ranNum]}`;
+       
+    })
+    </script>
+</body>
+</html>
